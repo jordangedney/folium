@@ -1,0 +1,35 @@
+cabal-version:      3.0
+name:               folium
+version:            0.1.0.0
+synopsis:           E-ink leaf wallpaper generator from botanical descriptions
+description:
+  Parses a written description using technical leaf-morphology terms
+  (ovate, serrulate, acuminate, cordate, craspedodromous, ...) and
+  procedurally renders that leaf as a framed plate on an e-ink
+  friendly grayscale wallpaper, with the description typeset beside it.
+license:            MIT
+license-file:       LICENSE
+author:             jordangedney@gmail.com
+build-type:         Simple
+
+executable folium
+  main-is:          Main.hs
+  hs-source-dirs:   app, src
+  other-modules:
+    Folium.Spec
+    Folium.Rand
+    Folium.Glossary
+    Folium.Describe
+    Folium.Leaf
+    Folium.Wrap
+    Folium.Page
+    Folium.Dither
+  build-depends:
+      base        >=4.15 && <5
+    , Rasterific  >=0.7
+    , FontyFruity >=0.5
+    , JuicyPixels >=3.3
+    , directory
+    , filepath
+  default-language: Haskell2010
+  ghc-options:      -O2 -Wall -Wno-name-shadowing

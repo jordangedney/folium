@@ -1,0 +1,9 @@
+dist-newstyle/
+samples/v*.png
+*.png
+!samples/ovate-cordate.png
+!samples/oak.png
+!samples/holly.png
+!samples/ginkgo.png
+!samples/small-bw.png
+!samples/random-7.png
